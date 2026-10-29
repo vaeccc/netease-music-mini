@@ -2,6 +2,14 @@
 
 极简网易云音乐浏览器播放器（Chrome Manifest V3 扩展）。
 
+## Mini 家族
+
+Mini 家族提供多个音乐平台的轻量浏览器播放器：
+
+- [Netease Music Mini](https://github.com/vaeccc/netease-music-mini)：网易云音乐歌单、搜索与后台播放。
+- [Bili mini](https://github.com/vaeccc/Bili-mini)：把有权访问的 B 站视频音轨作为后台音乐播放。
+- [QQ Music Mini](https://github.com/vaeccc/qq-music-mini)：QQ 音乐曲库、搜索与后台播放。
+
 ## 功能
 
 - 个人音乐：查看“我喜欢”和个人歌单，歌单内支持播放全部
