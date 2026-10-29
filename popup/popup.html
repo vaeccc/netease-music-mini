@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netease Music Mini</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <span id="brand-mark" class="brand-mark" aria-hidden="true"></span><h1>Netease Music Mini</h1>
+        <div id="account-wrap" class="account-wrap" hidden>
+          <button id="account-button" class="account-button" aria-expanded="false">账号</button>
+          <div id="account-menu" class="account-menu" hidden>
+            <div class="account-summary">
+              <span id="account-avatar" class="account-avatar" aria-hidden="true">N</span>
+              <span class="account-text"><strong id="account-name">网易云音乐账号</strong><small id="account-id">已登录</small></span>
+            </div>
+            <button id="logout-button" class="logout-button">退出登录</button>
+          </div>
+        </div>
+      </header>
+      <div id="notice" class="notice" role="status" hidden><span id="notice-text"></span><button id="diagnostic-button" class="diagnostic-button" type="button" hidden>诊断</button></div>
+      <section id="login-view" class="login-view" hidden>
+        <p>登录后播放你的会员歌曲和歌单。</p>
+        <button id="login-button" class="primary">登录网易云音乐</button>
+          <button id="web-login-button" class="text-button">使用官方网页登录</button>
+        <div id="qr-panel" class="qr-panel" hidden>
+          <img id="qr-image" alt="网易云音乐登录二维码">
+          <p id="qr-status">请使用网易云音乐 App 扫码登录</p>
+          <button id="retry-login" class="text-button">重新打开官方登录页</button>
+        </div>
+      </section>
+      <section id="music-view" class="music-view" hidden>
+        <nav class="nav" aria-label="主导航">
+          <button class="nav-button active" data-tab="liked">我喜欢</button>
+          <button class="nav-button" data-tab="playlists">歌单</button>
+          <button class="nav-button" data-tab="charts">榜单</button>
+          <button class="nav-button" data-tab="search">搜索</button>
+        </nav>
+        <div id="content" class="content"></div>
+      </section>
+    </main>
+    <footer id="mini-player" class="mini-player">
+      <div id="player-cover" class="player-cover" aria-hidden="true">♪</div>
+      <div class="now-playing"><strong id="player-title">暂无播放歌曲</strong><span id="player-artist"></span></div>
+      <div class="player-controls" aria-label="播放器控制">
+        <button id="mode-button" aria-label="播放模式：顺序播放" title="顺序播放"></button>
+        <button data-control="previous" aria-label="上一首" title="上一首"></button>
+        <button id="toggle-button" data-control="toggle" aria-label="播放" title="播放"></button>
+        <button data-control="next" aria-label="下一首" title="下一首"></button>
+      </div>
+      <div class="progress-row">
+        <span id="player-current-time">0:00</span>
+        <input id="progress-slider" type="range" min="0" max="0" value="0" step="1" aria-label="播放进度" disabled>
+        <span id="player-duration">0:00</span>
+      </div>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
